@@ -1,20 +1,5 @@
 # noiselife-dot-org
 
-FIXME
+Practice working with Clojure, Liberator, & Mustache in Google's "CLOUD". Working within the constraints of "serverless".
 
-## Prerequisites
-
-You will need [Leiningen][] 2.0.0 or above installed.
-
-[leiningen]: https://github.com/technomancy/leiningen
-
-## Running
-
-To start a web server for the application, run:
-
-    lein ring server
-
-## License
-
-Copyright © 2018 FIXME
-"# noiselife-dot-org" 
+Typically parked at noiselife.org .

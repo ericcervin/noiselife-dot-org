@@ -5,6 +5,7 @@
             [compojure.core :refer [defroutes ANY GET OPTIONS]]
             [cljstache.core :refer [render]]
             [clj-time.core :as t]
+            [noiselife_dot_org.representations.20180402 :refer [template-20180402]]
             [noiselife_dot_org.representations.20170225c :refer [template-20170225c]]))
 
 
@@ -18,7 +19,7 @@
 
 
 (defroutes app-routes
-  (GET "/" [] (render template-20170225c))
+  (GET "/" [] (render template-20180402))
   (ANY "*" [_] not-found))  
 
 (def app

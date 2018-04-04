@@ -22,9 +22,14 @@
              :available-media-types ["text/html"]
              :handle-ok (render template-20180402))
 
+(defresource robots [ctx]
+             :available-media-types ["text/plain"]
+             :handle-ok (str "User-agent: *\nDisallow: /\n"))
+
 
 (defroutes app-routes
   (GET "/" [] root)
+  (GET "/robots.txt" [] robots)
   (ANY "*" [_] not-found))  
 
 (def app

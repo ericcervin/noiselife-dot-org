@@ -17,9 +17,14 @@
   :available-media-types ["text/html"]
   :handle-ok (fn [ctx] (ring-response {:status 404 :body (render not-found-template)})))
 
+(defresource root [ctx]
+             :allowed-methods [:get :options]
+             :available-media-types ["text/html"]
+             :handle-ok (render template-20180402))
+
 
 (defroutes app-routes
-  (GET "/" [] (render template-20180402))
+  (GET "/" [] root)
   (ANY "*" [_] not-found))  
 
 (def app
